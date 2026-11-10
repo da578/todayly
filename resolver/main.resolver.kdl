@@ -1,0 +1,46 @@
+// =============================================================================
+// DUDUNG Context Resolver Specification – ToDayLy
+// Traceability: @token:TK-RESOLVER-TODAYLY-01
+// - Requirement: @impl:FR-THEME-01
+// - Design: @design:FR-THEME-01
+// =============================================================================
+
+resolver name="ToDayLy Theme Resolver" version="2025.10" {
+    description "Orkestrasi mode warna terang dan gelap untuk aplikasi ToDayLy"
+
+    sets {
+        set "foundation" {
+            description "Fondasi global token yang selalu dimuat"
+            sources {
+                ref "tokens/main.tokens.kdl"
+            }
+        }
+    }
+
+    modifiers {
+        modifier "theme" default="light" {
+            description "Tema visual antarmuka"
+            context "light" {
+                ref "tokens/main.tokens.kdl"
+            }
+            context "dark" {
+                ref "tokens/main.tokens.kdl"
+            }
+        }
+        modifier "density" default="comfortable" {
+            description "Skala kepadatan informasi UI"
+            context "comfortable" {
+                ref "tokens/main.tokens.kdl"
+            }
+            context "compact" {
+                ref "tokens/main.tokens.kdl"
+            }
+        }
+    }
+
+    resolutionOrder {
+        ref "#/sets/foundation"
+        ref "#/modifiers/theme"
+        ref "#/modifiers/density"
+    }
+}

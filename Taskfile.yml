@@ -1,0 +1,43 @@
+version: "3"
+
+vars:
+  APP_NAME: todayly
+
+tasks:
+  default:
+    desc: Display available tasks
+    cmds:
+      - task --list
+
+  typecheck:
+    desc: "Gate 1: Static type checking via TypeScript compiler"
+    cmds:
+      - bun run typecheck
+
+  lint:
+    desc: "Gate 2: Code quality verification"
+    cmds:
+      - bun run lint
+
+  test:
+    desc: "Gate 3: Automated test suite execution"
+    cmds:
+      - bun run test
+
+  build:
+    desc: "Gate 4: Compile production bundle into dist/"
+    cmds:
+      - bun run build
+
+  preview:
+    desc: "Preview compiled production bundle in dist/ via local HTTP server"
+    cmds:
+      - bun run preview
+
+  ci:
+    desc: "Execute Master Verification Pipeline (Typecheck, Lint, Test, Build)"
+    cmds:
+      - task: typecheck
+      - task: lint
+      - task: test
+      - task: build

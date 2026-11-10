@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content" />
+    
+    <!-- Primary Tab & SEO Metadata -->
+    <title>ToDayLy – Simple & Powerful Task Manager</title>
+    <meta name="description" content="A simple yet powerful to-do list app designed to manage tasks efficiently with reminders, deadlines, and local persistence." />
+    <meta name="keywords" content="todo list, task manager, reminder, deadline tracker, daily planner, productivity, task organizer, todayly" />
+    <meta name="author" content="Dzulkifli Anwar" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <!-- Open Graph / Facebook / WhatsApp / Telegram -->
+    <meta property="og:site_name" content="ToDayLy" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="ToDayLy – Simple & Powerful Task Manager" />
+    <meta property="og:description" content="A modern, distraction-free to-do list application featuring task reminders, deadline countdowns, multi-format export/import, and local persistence." />
+    <!-- og:url intentionally omitted until custom domain/URL is specified -->
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ToDayLy – Simple & Powerful Task Manager" />
+    <meta name="twitter:description" content="A modern, distraction-free to-do list application featuring task reminders, deadline countdowns, multi-format export/import, and local persistence." />
+
+    <!-- Mobile & PWA Browser Configuration -->
+    <meta name="application-name" content="ToDayLy" />
+    <meta name="apple-mobile-web-app-title" content="ToDayLy" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#3D5F90" />
+
+    <!-- Fonts: Google Sans & Google Sans Text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Google+Sans+Text:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Schema.org Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "ToDayLy",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "description": "A simple yet powerful to-do list app designed to manage tasks efficiently with reminders, deadlines, and local persistence.",
+        "author": {
+          "@type": "Person",
+          "name": "Dzulkifli Anwar"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "Task management with reminders and deadlines",
+          "Real-time search and multi-criteria sorting",
+          "Multi-format export and import (JSON, YAML, CSV)",
+          "Light and Dark mode support",
+          "Distraction-free local storage persistence"
+        ]
+      }
+    </script>
+  </head>
+  <body class="font-sans antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

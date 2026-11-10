@@ -1,0 +1,39 @@
+// @design:FR-TASK-01
+Table tasks {
+  id integer [pk, note: 'Unique timestamp-based identifier']
+  name text [not null, note: 'Task title']
+  description text [not null, default: '', note: 'Additional notes or checklist context']
+  status integer [not null, default: 0, note: 'Completion status (0 = active/todo, 1 = completed)']
+  order integer [not null, default: 0, note: 'Display position in custom reordering']
+  reminder text [note: 'Scheduled reminder datetime in ISO 8601']
+  deadline text [note: 'Task due deadline datetime in ISO 8601']
+  is_pinned integer [not null, default: 0, note: 'Pinned flag for top group priority']
+  is_archived integer [not null, default: 0, note: 'Archived flag for completed/inactive storage']
+  archived_at text [note: 'Datetime when moved to archive']
+  deleted_at text [note: 'Datetime when moved to trash (null = not in trash)']
+  created_at text [not null, note: 'ISO 8601 creation timestamp']
+  updated_at text [not null, note: 'ISO 8601 last updated timestamp']
+}
+
+// @design:FR-TAG-01
+Table tags {
+  id text [pk, note: 'Unique tag slug identifier, e.g. tag-work']
+  name text [not null, note: 'Human-readable tag display name']
+  color text [not null, note: 'HEX color code representing the category']
+  created_at text [not null, note: 'ISO 8601 creation timestamp']
+}
+
+// @design:FR-TASK-04
+Table task_tags {
+  task_id integer [not null, ref: > tasks.id, note: 'Foreign key referencing tasks(id)']
+  tag_id text [not null, ref: > tags.id, note: 'Foreign key referencing tags(id)']
+
+  indexes {
+    (task_id, tag_id) [pk]
+  }
+}
+
+Table app_settings {
+  key text [pk, note: 'Setting configuration key']
+  value text [not null, note: 'Serialized setting string value']
+}

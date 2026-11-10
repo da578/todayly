@@ -1,0 +1,117 @@
+// =============================================================================
+// DUDUNG Design Tokens Source Specification – ToDayLy
+// Traceability: @token:TK-TODAYLY-CORE-01
+// - Requirement: @impl:FR-THEME-01
+// - Design: @design:FR-THEME-01
+// =============================================================================
+
+group "color" type="color" {
+    description "Material 3 Light and Dark semantic color palette"
+
+    group "brand" {
+        color "primary-light" colorSpace="srgb" hex="#3D5F90" {
+            components 0.239 0.373 0.565
+            alpha 1.0
+            description "Primary action color for light mode"
+        }
+        color "primary-dark" colorSpace="srgb" hex="#A6C8FF" {
+            components 0.651 0.784 1.0
+            alpha 1.0
+            description "Primary action color for dark mode"
+        }
+        color "on-primary-light" colorSpace="srgb" hex="#FFFFFF" {
+            components 1.0 1.0 1.0
+            alpha 1.0
+        }
+        color "on-primary-dark" colorSpace="srgb" hex="#02315F" {
+            components 0.008 0.192 0.373
+            alpha 1.0
+        }
+        color "primary-container-light" colorSpace="srgb" hex="#D5E3FF" {
+            components 0.835 0.890 1.0
+            alpha 1.0
+        }
+        color "primary-container-dark" colorSpace="srgb" hex="#234776" {
+            components 0.137 0.278 0.463
+            alpha 1.0
+        }
+    }
+
+    group "surface" {
+        color "background-light" colorSpace="srgb" hex="#F9F9FF" {
+            components 0.976 0.976 1.0
+            alpha 1.0
+        }
+        color "background-dark" colorSpace="srgb" hex="#111318" {
+            components 0.067 0.075 0.094
+            alpha 1.0
+        }
+        color "surface-container-light" colorSpace="srgb" hex="#EDEDF4" {
+            components 0.929 0.929 0.957
+            alpha 1.0
+        }
+        color "surface-container-dark" colorSpace="srgb" hex="#1D2024" {
+            components 0.114 0.125 0.141
+            alpha 1.0
+        }
+        color "surface-container-high-light" colorSpace="srgb" hex="#E7E8EE" {
+            components 0.906 0.910 0.933
+            alpha 1.0
+        }
+        color "surface-container-high-dark" colorSpace="srgb" hex="#282A2F" {
+            components 0.157 0.165 0.184
+            alpha 1.0
+        }
+    }
+
+    group "feedback" {
+        color "error-light" colorSpace="srgb" hex="#BA1A1A" {
+            components 0.729 0.102 0.102
+            alpha 1.0
+        }
+        color "error-dark" colorSpace="srgb" hex="#FFB4AB" {
+            components 1.0 0.706 0.671
+            alpha 1.0
+        }
+        color "success-light" colorSpace="srgb" hex="#10B981" {
+            components 0.063 0.725 0.506
+            alpha 1.0
+        }
+        color "warning-light" colorSpace="srgb" hex="#F59E0B" {
+            components 0.961 0.620 0.043
+            alpha 1.0
+        }
+    }
+}
+
+group "space" type="dimension" {
+    description "Layout spacing scales in logical pixels"
+    dimension "none" 0 unit="px"
+    dimension "xs" 4 unit="px"
+    dimension "sm" 8 unit="px"
+    dimension "md" 12 unit="px"
+    dimension "base" 16 unit="px"
+    dimension "lg" 20 unit="px"
+    dimension "xl" 24 unit="px"
+    dimension "2xl" 32 unit="px"
+}
+
+group "radii" type="dimension" {
+    description "Corner radius invariants in logical pixels"
+    dimension "sm" 8 unit="px"
+    dimension "md" 12 unit="px"
+    dimension "lg" 16 unit="px"
+    dimension "xl" 20 unit="px"
+    dimension "2xl" 24 unit="px"
+    dimension "full" 9999 unit="px"
+}
+
+group "motion" {
+    description "Animation timing and spring physics curves"
+    duration "fast" 150 unit="ms"
+    duration "normal" 300 unit="ms"
+    duration "slow" 400 unit="ms"
+    cubicBezier "standard" 0.2 0.0 0.0 1.0
+    cubicBezier "spring" 0.34 1.35 0.64 1.0
+    cubicBezier "decelerate" 0.16 1.0 0.3 1.0
+}

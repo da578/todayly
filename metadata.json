@@ -1,0 +1,7 @@
+{
+  "name": "ToDayLy",
+  "description": "A simple yet powerful to-do list app designed to manage tasks efficiently with reminders, deadlines, and local persistence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
